@@ -36,12 +36,6 @@ python train_v2_final.py -test path/to/best.pth
 ```
 
 
-## 결과
-
-| 실험 | Pretrained | LR | Best Test Acc |
-|---|---|---|---|
-| [실험명 입력] | [True/False] | [값] | [값]% |
-
 ## 환경
 
 ```
