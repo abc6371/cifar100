@@ -35,24 +35,6 @@ python train_v2_final.py -resume path/to/checkpoint.pth
 python train_v2_final.py -test path/to/best.pth
 ```
 
-## `config_v2.yaml` 설정 항목
-
-스크립트가 참조하는 설정 파일이며, 아래 키들을 정의해야 합니다.
-
-| 키 | 설명 |
-|---|---|
-| `seed` | 랜덤 시드 |
-| `epochs`, `batch_size`, `img_size`, `num_classes` | 학습 기본 파라미터 |
-| `cifar100_root` | CIFAR-100 데이터 경로 (없으면 torchvision이 자동 다운로드) |
-| `cimages_dir` | `-test` 추론에 쓰이는 커스텀 이미지(jpg) 디렉토리 |
-| `log_dir` | 체크포인트/로그 저장 경로 |
-| `num_workers` | DataLoader worker 수 |
-| `model_tag` | 실험 로그 파일명에 붙는 태그 |
-| `fusion_out_indices` | backbone에서 추출할 stage 인덱스 2개 (예: `[2, 3]`) |
-| `fusion_dim`, `bottleneck_dim`, `dropout` | fusion/classifier 차원 및 dropout 비율 |
-| `aux_loss_weight` | stage별 보조 loss 가중치 |
-| `max_params` | 파라미터 수 상한 |
-| `experiments` | `name`, `pretrained`, `lr`, (선택) `weight_decay`, `label_smoothing`을 가진 실험 목록 |
 
 ## 결과
 
