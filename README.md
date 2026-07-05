@@ -1,6 +1,6 @@
 # ConvNeXtV2 Stage3/4 Adaptive Fusion 분류기 (CIFAR-100)
 
-ConvNeXtV2(`convnextv2_tiny`) backbone의 stage3/stage4 feature를 게이팅(gating)으로 적응적 융합해 분류하는 모델을 CIFAR-100으로 학습/평가하는 스크립트입니다.
+ConvNeXtV2(`convnextv2_tiny`) backbone의 stage3/stage4 feature를 게이팅(gating)으로 적응적 융합해 분류하는 모델을 CIFAR-100으로 학습/평가한다.
 
 ## 모델 구조 (`AdaptiveStage34FusionConvNeXtV2`)
 
@@ -28,10 +28,8 @@ python train_v2_final.py -new
 # 체크포인트 이어서 학습 (지정 안 하면 log/model 안 최신 체크포인트 자동 탐색)
 python train_v2_final.py
 
-# 특정 체크포인트에서 재개
 python train_v2_final.py -resume path/to/checkpoint.pth
 
-# 커스텀 이미지 디렉토리 추론
 python train_v2_final.py -test path/to/best.pth
 ```
 
